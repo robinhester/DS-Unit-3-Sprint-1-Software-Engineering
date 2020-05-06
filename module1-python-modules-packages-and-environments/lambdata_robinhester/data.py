@@ -1,6 +1,5 @@
 import pandas as pd 
 from lambdata_robinhester.accuracy import accuracy_score
-from lambdata_robinhester.date import date_conversion
 from lambdata_robinhester.train import train_val_test_split
 
 a_list=pd.Series([2039, 4992, 8906, 12094])
