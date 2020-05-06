@@ -1,7 +1,7 @@
 import pandas as pd 
-from lambdata_robinhester.function import accuracy_score
+from lambdata_robinhester.accuracy import accuracy_score
 from lambdata_robinhester.date import date_conversion
-
+from lambdata_robinhester.train import train_val_test_split
 
 a_list=pd.Series([2039, 4992, 8906, 12094])
 b_list=pd.Series([2039,4000,8000,12098])
@@ -14,8 +14,8 @@ df=pd.read_csv('https://raw.githubusercontent.com/robinhester/youtube_build/mast
 
 print(df.head())
 
+train,val,test=train_val_test_split(df)
 
-df2=pd.Series(df.usercreated)
-date_conversion(df2)
-
-print(df2.head())
+print(train.head())
+print(val.head())
+print(test.head())
